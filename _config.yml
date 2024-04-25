@@ -6,12 +6,12 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Hello
+title: felix'blog
 description: just a rookie
 github_username: jph00
 
 # Email and twitter are optional:
-email:
+email: felixjiao@outlook.com
 twitter_username:
 
 # Set this to true to get LaTeX math equation support
