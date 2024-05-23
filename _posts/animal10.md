@@ -20,6 +20,9 @@
 </style>
 
 ## Introduction
+In this part, we use the paddy disease dataset to train a convolutional neural network to classify paddy diseases.
+
+We present the [report](PaddyDoctor/paddy.md), the [code](PaddyDoctor/paddy.ipynb), and the [results](PaddyDoctor/paddy.pdf)
 
 In this part, we build a network model based on fastai library to realize the classification of 10 kinds of animals. We select appropriate models, propose effective solutions and give corresponding experimental results and explanations.
 
