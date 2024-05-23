@@ -1,4 +1,4 @@
-# Introduction to Transformer + LSTM Algorithm
+# Transformer + LSTM Algorithm
 
 The combination of Transformer and LSTM (Long Short-Term Memory) leverages the strengths of both models to enhance sequence modeling tasks. The Transformer is excellent at capturing long-range dependencies and parallelizing computations, while LSTM excels at learning temporal patterns and maintaining sequential order through its gating mechanisms. By integrating both, we can create a hybrid model that benefits from the Transformer’s attention mechanism and the LSTM’s ability to handle temporal dependencies.
 
