@@ -1,4 +1,4 @@
-# Introduction to the Transformer Algorithm
+# Transformer Algorithm
 
 The Transformer algorithm, introduced by Vaswani et al. in the 2017 paper "Attention is All You Need," is a deep learning model based on the attention mechanism. Initially developed for sequence-to-sequence tasks such as machine translation, the Transformer has found wide application in various fields, including natural language processing (NLP) and computer vision, due to its powerful representation capabilities and efficient training process.
 
