@@ -1,4 +1,4 @@
-# Introduction to LSTM Algorithm
+# LSTM Algorithm
 
 LSTM (Long Short-Term Memory) networks are a type of recurrent neural network (RNN) capable of learning long-term dependencies. They were introduced by Hochreiter and Schmidhuber in 1997 and have since become very popular for various sequence modeling tasks. LSTMs are designed to overcome the limitations of traditional RNNs, particularly the issue of vanishing and exploding gradients, which makes it difficult for RNNs to learn long-range dependencies.
 
