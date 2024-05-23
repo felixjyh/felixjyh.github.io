@@ -1,0 +1,92 @@
+# <center>Assignment 3 Part 1 Paddy Doctor (Report) </center>
+
+<style>
+.center 
+{
+  width: 600px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<style>
+.centertable 
+{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+## Introduction
+
+In this part, we firstly repeat an existing solution to the Paddy Doctor problem in kaggle, and then try to improve the performance of the solution.
+
+The code is uploaded to [Notebook](paddy.ipynb)
+
+The result is uploaded to [PDF](paddy.pdf)
+
+## Table of Contents
+1. [Introduction](#Introduction)
+2. [Problem Statement](#Problem-Statement)
+3. [Objective](#Objective)
+4. [Experiment Setup](#Experiment-Setup)
+5. [Experiment Results](#Experiment-Results)
+6. [Conclusion](#Conclusion)
+
+## Problem Statement
+
+Rice (Oryza sativa) is one of the staple foods worldwide. Paddy, the raw grain before removal of husk, is cultivated in tropical climates, mainly in Asian countries. Paddy cultivation requires consistent supervision because several diseases and pests might affect the paddy crops, leading to up to 70% yield loss. Expert supervision is usually necessary to mitigate these diseases and prevent crop loss. With the limited availability of crop protection experts, manual disease diagnosis is tedious and expensive. Thus, it is increasingly important to automate the disease identification process by leveraging computer vision-based techniques that achieved promising results in various domains.(From: https://www.kaggle.com/competitions/paddy-disease-classification)
+
+<div class="center">
+
+![alt text](images/image.png)
+
+</div>
+
+## Objective
+
+The main objective of this competition is to develop a machine or deep learning-based model to classify the given paddy leaf images accurately. We provide a training dataset of 10,407 (75%) labeled images across ten classes (nine disease categories and normal leaf). Moreover, we also provide additional metadata for each image, such as the paddy variety and age. Your task is to classify each paddy image in the given test dataset of 3,469 (25%) images into one of the nine disease categories or a normal leaf. (From: https://www.kaggle.com/competitions/paddy-disease-classification)
+
+## Experiment Results and Conclusion
+
+We use 80% of the training set for training, 20% for validation, and the test set for evaluating the accuracy of the classification. Each model was trained on 30 epochs, including resnet26d, resnet34, vgg19_bn, and densenet121. We tested the loss curve of each model in the training process, the accuracy curve on the verification set and the accuracy curve on the test set.
+
+<div class="center">
+
+![alt text](images/image2.png)
+
+</div>
+
+<div class="center">
+
+![alt text](images/image3.png)
+
+</div>
+
+As can be seen from the figure above, with the progress of training, the loss decreases continuously, and the error rate of the model on the test machine also decreases continuously and gradually becomes stable after the 15th epoch. After training with 30 epoches, densetnet with the deepest network layer achieved the lowest error rate.
+
+<p align="center"><font face="Times New Roman" size=4>Model Performance</font></p>
+
+<div class="centertable">
+
+Model | Resnet_26d | Resnet_34 | VGG19_bn | Densenet121
+:----:|:----:|:----:|:----:|:----:
+Error Rate | 0.0413 | 0.0476 | 0.0336 | 0.0303
+
+</div>
+
+We also explored the impact of data augmentation on model performance. We used Resnet_26d network for training. When 30 epochs are trained for without data enhancement, the maximum error rate of this network can reach 0.0413, while when data augmentation is used, it can reach 0.0356. When we applied the same data augmentation operation to the test machine, the error rate reached 0.0240, which was lower than that of Densenet_121 without data enhancement.
+
+<div class="center">
+
+![alt text](images/image4.png)
+
+</div>
+
+<div class="center">
+
+![alt text](images/image5.png)
+
+</div>
